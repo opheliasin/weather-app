@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block content%}
+<div class="container">
+    <div class="row">
+    <div class="col"></div>
+      <div class="col" id = "icon" align = "right">
+        <img src = {{icon_url}} alt="Weather Icon">
+      </div>
+      <div class="col" id = "result" align = "left">
+        <h3> {{city}} </h3> 
+        <p> {{data['main']['temp']}} &#8451; </p>
+        <p> {{data['weather'][0]['description']}} </p>
+      </div>
+      <div class="col"></div>
+    </div>
+{% endblock %}
