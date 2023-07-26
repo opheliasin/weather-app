@@ -1,0 +1,11 @@
+runtime: python39
+env: standard
+
+handlers:
+  - url: /static
+    static_dir: static/
+  - url: .*
+    secure: always
+    script: auto
+
+entrypoint: gunicorn -b :$PORT main:app
