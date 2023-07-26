@@ -3,5 +3,6 @@ flask_wtf == 1.1.1
 wtforms == 3.0.0
 flask_flatpages == 0.7.2
 flask_frozen == 0.15
+app
 requests
 sys
