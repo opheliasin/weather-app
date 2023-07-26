@@ -11,6 +11,7 @@ WORKDIR $APP_HOME
 COPY ./app /app
 
 # Install production dependencies.
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 RUN pip install gunicorn
 
