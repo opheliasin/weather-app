@@ -10,11 +10,11 @@ def search():
     query = form.query.data
     if request.method == "POST" and query == "":
         flash('City/Zipcode is required.', category = "error")
-        return render_template("base.html", form = form) 
+        return render_template("index.html", form = form) 
     elif request.method == "POST" and form.validate_on_submit():
         return redirect((url_for('search_results', query=query, form = form)))
     else:
-        return render_template("base.html",form = form) 
+        return render_template("index.html",form = form) 
 
 @app.route('/search_results/<query>')
 def search_results(query):
